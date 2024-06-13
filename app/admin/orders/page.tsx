@@ -12,7 +12,7 @@ export default function OrdersPage() {
     refreshInterval: 60000,
     revalidateOnFocus: false
   })
-  if(isLoading) return <p>'Caragando...'</p> 
+  if(isLoading) return <p>Cargando...</p> 
   if(data) return (
     <div>
        <Heading>Administrar Ordenes</Heading>

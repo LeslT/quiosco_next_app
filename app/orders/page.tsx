@@ -11,7 +11,7 @@ export default function OrdersPage() {
     refreshInterval: 60000,
     revalidateOnFocus: false
   })
-  if(isLoading) return  <p>'Caragando...'</p>
+  if(isLoading) return  <p>Cargando...</p>
   if(data) return (
     <>
       <h1 className="text-center mt-20 text-6xl font-black">Ordenes Listas</h1>
@@ -19,7 +19,7 @@ export default function OrdersPage() {
       {data.length ? (
         <div className="grid grid-cols-1 gap-5 max-w-5xl mx-auto mt-10">
             {data.map(order => (
-                <LatestOrderITem order={order}/>
+                <LatestOrderITem  key={order.id} order={order}/>
             ))}
         </div>
       ): 
